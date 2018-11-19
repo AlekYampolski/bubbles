@@ -1,8 +1,5 @@
 d3.text("https://raw.githubusercontent.com/AlekYampolski/bubbles/master/newData.csv").then(function(dataCSV) {
   var svgWidth = 6000;
-  console.log(dataCSV);
-  return;
-
   var svgHeight = 1000;
   
   var margin = {top: 50, right: 50, bottom: 50, left: 50};
