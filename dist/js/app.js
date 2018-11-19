@@ -1,4 +1,4 @@
-d3.text("").then(function(dataCSV) {
+d3.text("https://raw.githubusercontent.com/AlekYampolski/bubbles/master/newData.csv").then(function(dataCSV) {
   var svgWidth = 6000;
   console.log(dataCSV);
   return;
