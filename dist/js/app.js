@@ -1,5 +1,5 @@
 d3.csv("https://raw.githubusercontent.com/AlekYampolski/bubbles/master/newData.csv").then(function(dataCSV) {
-  var svgWidth = 6000;
+  var svgWidth = 2500;
   var svgHeight = 1000;
   
   var margin = {top: 50, right: 50, bottom: 50, left: 50};
@@ -15,7 +15,7 @@ d3.csv("https://raw.githubusercontent.com/AlekYampolski/bubbles/master/newData.c
   
   var xAv = d3.extent(dataCSV, d => +d.Age);
   var yAv = d3.extent(dataCSV, d => {
-      if(+d.TotalHours < 10000){
+      if(+d.TotalHours < 2500){
           return +d.TotalHours;
       } else {
           console.log(+d.TotalHours);
@@ -111,7 +111,7 @@ d3.csv("https://raw.githubusercontent.com/AlekYampolski/bubbles/master/newData.c
         let itCirc = drawAge(innerSpace, newData[i], i, yAxisScale, xAxisScale, radiusScale );
 
         let simulatino = d3.forceSimulation()
-            .force('x', d3.forceX(d => xAxisScale(d.Age)).strength(0.05))
+            .force('x', d3.forceX(d => xAxisScale(d.Age)).strength(0.15))
             .force('y', d3.forceY(d => yAxisScale(d.TotalHours)).strength(0.05))
             .force('collide', d3.forceCollide(d => {
                 // console.log(d);
